@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/gaceta
+# catalog-date 2008-08-19 21:00:04 +0200
+# catalog-license lppl
+# catalog-version 1.06
 Name:		texlive-gaceta
 Version:	1.06
 Release:	1
@@ -41,6 +47,7 @@ Sociedad Matematica Espanola>>.
 %doc %{_texmfdistdir}/doc/latex/gaceta/plantilla-articulo-de-seccion.tex
 %doc %{_texmfdistdir}/doc/latex/gaceta/plantilla-articulo-suelto.pdf
 %doc %{_texmfdistdir}/doc/latex/gaceta/plantilla-articulo-suelto.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ Sociedad Matematica Espanola>>.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
