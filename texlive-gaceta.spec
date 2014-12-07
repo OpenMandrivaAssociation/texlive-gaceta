@@ -6,7 +6,7 @@
 # catalog-version 1.06
 Name:		texlive-gaceta
 Version:	1.06
-Release:	8
+Release:	9
 Summary:	A class to typeset La Gaceta de la RSME
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gaceta
