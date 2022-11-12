@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/gaceta
-# catalog-date 2008-08-19 21:00:04 +0200
-# catalog-license lppl
-# catalog-version 1.06
 Name:		texlive-gaceta
-Version:	1.06
-Release:	11
+Version:	15878
+Release:	1
 Summary:	A class to typeset La Gaceta de la RSME
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gaceta
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gaceta.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gaceta.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gaceta.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gaceta.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ The class will typeset papers for <<La Gaceta de la Real
 Sociedad Matematica Espanola>>.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -41,24 +35,10 @@ Sociedad Matematica Espanola>>.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.06-2
-+ Revision: 752179
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.06-1
-+ Revision: 718517
-- texlive-gaceta
-- texlive-gaceta
-- texlive-gaceta
-- texlive-gaceta
-
