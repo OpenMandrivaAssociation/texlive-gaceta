@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A class to typeset La Gaceta de la RSME
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/gaceta
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/gaceta
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gaceta.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/gaceta.doc.r%{version}.tar.xz
